@@ -46,7 +46,9 @@ app.use('/inventory', productsRouter);
 app.use('/', indexRouter);
 app.use('/api/products', productsRouter);
 
-var port = 8080;
+
+
+var port = process.env.Port || 8080;
 app.listen(port, function(){
   console.log("je t'écoute..." + port);
 });
